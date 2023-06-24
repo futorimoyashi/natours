@@ -154,7 +154,6 @@ exports.isLoggedIn = async (req, res, next) => {
 
 exports.restrictTo = (...roles) => {
   return (req, res, next) => {
-    console.log(req.user.role, req.user.email);
     if (!roles.includes(req.user.role)) {
       return next(
         new AppError('You dont have permission to perform this action', 403)

@@ -57,7 +57,6 @@ const sendProdErr = (err, req, res) => {
     }
 
     //Unknow error: Dont leak error details
-    console.log('Error: ', err);
     return res.status(err.statusCode).json({
       status: 'error',
       message: 'something went wrong!',
@@ -74,7 +73,6 @@ const sendProdErr = (err, req, res) => {
   }
 
   //Unknow error: Dont leak error details
-  console.log('Error: ', err);
   return res.status(err.statusCode).render('error', {
     title: 'something went wrong!',
     message: 'Please try it again later.',

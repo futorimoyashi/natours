@@ -6,12 +6,12 @@ export const updateSetting = async (data, type) => {
     let url;
     let headers;
     if (type === 'password') {
-      url = 'http://127.0.0.1:3000/api/v1/users/updateMyPassword';
+      url = '/api/v1/users/updateMyPassword';
       headers = {
         'Content-Type': 'application/json',
       };
     } else {
-      url = 'http://127.0.0.1:3000/api/v1/users/updateMe';
+      url = '/api/v1/users/updateMe';
     }
     const res = await fetch(url, {
       method: 'PATCH',

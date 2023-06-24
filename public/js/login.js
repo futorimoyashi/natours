@@ -3,7 +3,7 @@ import { showAlert } from './alert';
 
 export const login = async function (email, password) {
   try {
-    const res = await fetch('http://127.0.0.1:3000/api/v1/users/login', {
+    const res = await fetch('/api/v1/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const login = async function (email, password) {
 
 export const logout = async () => {
   try {
-    const res = await fetch('http://127.0.0.1:3000/api/v1/users/logout', {
+    const res = await fetch('/api/v1/users/logout', {
       method: 'GET',
     });
 
